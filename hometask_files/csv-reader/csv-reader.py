@@ -1,6 +1,9 @@
 import csv
+from csv import DictReader
 
-with open('C:\Users\evgeniy.s\PycharmProjects\Otus_QA_Saganchi\hometask_files\data', 'r', encoding='utf-8') as f:
+encoding='utf-8'
+
+with open('../hometask_files/data', 'r') as f:
     reader = DictReader(f)
 
     # Итерируемся по данным делая из них словари
