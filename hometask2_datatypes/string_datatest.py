@@ -13,9 +13,10 @@ def test_string_two():
 
 
 def test_string_three():
-    big_name = 'evgeniysaganchi' + 'igorevich'
-    assert big_name != 'evgeniysaganciigorevich'
+    big_name = 'saganchi_evgeniy' + '_igorevich'
+    assert big_name == 'saganchi_evgeniy_igorevich'
 
-def test_string_four():
+# def test_string_four():
 
-def test_string_five():
+
+# def test_string_five():
