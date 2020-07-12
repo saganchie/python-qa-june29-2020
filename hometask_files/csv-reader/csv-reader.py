@@ -1,6 +1,7 @@
 import csv
 from csv import DictReader
 
+
 # with open('../data/data.csv', 'r') as file:
 #    reader = csv.reader(file)
 #    header = next(reader)

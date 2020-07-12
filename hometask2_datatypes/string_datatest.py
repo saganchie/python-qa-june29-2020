@@ -16,5 +16,6 @@ def test_string_three():
     big_name = 'evgeniysaganchi' + 'igorevich'
     assert big_name != 'evgeniysaganciigorevich'
 
-# def test_string_four():
+def test_string_four():
 
+def test_string_five():
