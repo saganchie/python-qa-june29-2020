@@ -16,9 +16,9 @@ def test_string_three():
     big_name = 'saganchi_evgeniy' + '_igorevich'
     assert big_name == 'saganchi_evgeniy_igorevich'
 
-@pytest.mark.parametrize("test_input", ((1,1),(2,2),(3,3)))
+@pytest.mark.parametrize("test_input", [(1,1),(2,2),(3,3)])
 def test_string_four(test_input):
-    assert test_input(0) - test_input(1) == 0
+    assert test_input[0] - test_input[1] == 0
 
-# def test_string_five():
+def test_string_five():
 
