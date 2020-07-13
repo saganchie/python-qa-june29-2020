@@ -6,11 +6,9 @@ def test_string_one():
     second_name = 'Evgeniy'
     assert second_name[0] == 'E'
 
-
 def test_string_two():
     long_name = 'evgeniysaganchy'
     assert long_name[7:] == 'saganchy'
-
 
 def test_string_three():
     big_name = 'saganchi_evgeniy' + '_igorevich'
@@ -20,4 +18,7 @@ def test_string_three():
 def test_string_four(test_input):
     assert test_input[0] - test_input[1] == 0
 
-# def test_string_five():
+
+def test_string_five():
+    hight_string = 'shkola'
+    assert hight_string.capitalize() == 'Shkola'
