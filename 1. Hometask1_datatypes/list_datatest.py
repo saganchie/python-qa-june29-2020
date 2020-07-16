@@ -34,3 +34,12 @@ list = [1,2,3,4]
 def test_list_five(an_element_from_the_list):
     a = sum(list)
     assert a == 10
+
+
+def test_set_one():
+    numbers = [1, 2, 3, 2, 3, 4, 5]
+    set_numbers = set(numbers)
+# print(set_numbers)
+    set_numbers.add('666')
+# print(set_numbers)
+    assert '666' in set_numbers
