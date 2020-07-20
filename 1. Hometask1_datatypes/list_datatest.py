@@ -35,7 +35,6 @@ def test_list_four():
 
 list = [1, 2, 3, 4]
 
-
 @pytest.mark.parametrize('an_element_from_the_list', list)
 def test_list_five(an_element_from_the_list):
     a = sum(list)
