@@ -15,7 +15,7 @@ from json import dumps
 #        print(dict(zip(header, item))['Title'])
 
     # используем контекстный менеджер для чтения csv файла
-with open('../hometask_files/data/data.csv', 'r') as k:
+with open('./data/data.csv', 'r') as k:
     reader = DictReader(k)
 
     # Итерируемся по данным делая из них словари
@@ -24,9 +24,10 @@ with open('../hometask_files/data/data.csv', 'r') as k:
         # print(row['Title'])
 
     # используем контекстный менеджер для чтения json файла
-with open('../hometask_files/data/data1.json', 'r') as file:
+with open('./data/data1.json', 'r') as file:
     j = file.read()
     n = loads(j)
-    print(n)
+    for people in n:
+        print(people)
     # print(type(n))
     # print(type(dumps(n)))
