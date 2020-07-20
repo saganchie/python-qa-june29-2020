@@ -35,7 +35,7 @@ def test_set_one():
 def test_set_two():
     days = ['Monday', 'Tuesday', 'Saturday', 'Friday', 'Monday']
     set_days = set(days)
-    # print(set_days)
+    # print(set_days)"
     set_days.remove('Friday')
     # print(set_days)
     assert 'Friday' not in set_days
