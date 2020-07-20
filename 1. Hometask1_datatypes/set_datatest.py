@@ -1,7 +1,14 @@
 from typing import Set
-
 import pytest
 
+# Первый пример
+
+def test_set_zero():
+    week = {'Monday','Tuesday','Wednesday', 'Thursday', 'Friday'}
+    weekend = {'Saturday','Sunday'}
+    all_week = week | weekend
+    len_week = len(all_week)
+    assert len_week == 7
 
 # Создаем множество из списка при помощи set.
 # Проверяем, что во множество был добавлен элемент
@@ -44,18 +51,14 @@ def test_set_three():
     assert set_one.issubset(all_set)
 
 
-def test_set_four():
-    first_set = {'Patrick', 'Ksuha', 'Serega', 'Elchugin'}
-    second_set = {'Elchugin', 'Rita', 'Grishina'}
+# Параметризация
 
-    pass
+set1 = [{'Patrick', 'Ksuha', 'Serega', 'Elchugin'}, {'Elchugin', 'Rita', 'Grishina'}]
+set2 = [{'Elchugin', 'Rita', 'Grishina'}, {'Rita', 'Grishina'}]
 
-set1 = {'Patrick', 'Ksuha', 'Serega', 'Elchugin'}
-set2 = {'Elchugin', 'Rita', 'Grishina'}
 
-@pytest.mark.parametrize('an_element_in_the_set', set1, set2)
-def inter(an_element_in_the_set):
-    new_set = set1 ^ set2
+@pytest.mark.parametrize('an_element_in_the_set', (set1, set2))
+def test_set_four(an_element_in_the_set):
+    new_set = an_element_in_the_set[0] ^ an_element_in_the_set[1]
     print(new_set)
     assert 'Elchugin' not in new_set
-
