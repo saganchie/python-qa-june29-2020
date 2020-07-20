@@ -1,11 +1,11 @@
 from typing import Set
 import pytest
 
-# Первый пример
+# Объединяем два множества, проверка длины
 
 def test_set_zero():
     week = {'Monday','Tuesday','Wednesday', 'Thursday', 'Friday'}
-    weekend = {'Saturday','Sunday'}
+    weekend = {'Saturday', 'Sunday'}
     all_week = week | weekend
     len_week = len(all_week)
     assert len_week == 7
