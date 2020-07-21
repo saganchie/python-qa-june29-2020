@@ -1,6 +1,6 @@
 import csv
 from csv import DictReader
-from json import loads, dumps
+from json import loads
 from json import dumps
 
 
@@ -15,10 +15,12 @@ from json import dumps
 #        print(dict(zip(header, item))['Title'])
 
     # используем контекстный менеджер для чтения csv файла
-with open('./data/data.csv', 'r') as k:
-    reader = DictReader(k)
+
+with open('./data/data.csv', 'r') as data_from_csv:
+    reader = DictReader(data_from_csv)
 
     # Итерируемся по данным делая из них словари
+
     for items in reader:
         print(items)
         # print(row['Title'])
@@ -31,3 +33,8 @@ with open('./data/data1.json', 'r') as file:
         print(people)
     # print(type(n))
     # print(type(dumps(n)))
+
+    # Используем контекстный менеджер для записи json в фаил
+
+with open('newest_json.json', 'w') as newfile:
+    pass
