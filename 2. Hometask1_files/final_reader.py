@@ -42,6 +42,7 @@ def test_create_final_list():
     return final
 
 
+
 with open("./output.json", "w+") as output:
     output.write(
         json.dumps(test_create_final_list())
