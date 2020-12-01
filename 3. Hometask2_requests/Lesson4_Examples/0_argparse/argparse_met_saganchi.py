@@ -23,6 +23,7 @@ parser.add_argument('--path',
                     help='True or False param',
                     required=False)
 
+
 # Функция
 def url_maker(schema, host, path):
     return schema + "://" + host + path

@@ -3,6 +3,7 @@ import requests
 
 
 def pytest_addoption(parser):
+
     parser.addoption(
         "--url",
         default="https://httpbin.org/",
@@ -13,7 +14,7 @@ def pytest_addoption(parser):
         "--method",
         default="get",
         choices=["get", "post", "put", "patch", "delete"],
-        help="method to execute"
+        help="Method to execute"
     )
 
 
