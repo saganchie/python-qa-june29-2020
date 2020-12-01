@@ -2,7 +2,7 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-#
+# Тип схемы для адресации запросов
 parser.add_argument('-s', '--schema',
                     help='schema of the URL',
                     type=str,
@@ -10,7 +10,7 @@ parser.add_argument('-s', '--schema',
                     default='https',
                     choices=['http', 'https'])
 
-#
+# Указание хоста, к которому обращаемся
 parser.add_argument('--host',
                     help='host',
                     type=str,
@@ -23,8 +23,7 @@ parser.add_argument('--path',
                     help='True or False param',
                     required=False)
 
-
-#
+# Функция
 def url_maker(schema, host, path):
     return schema + "://" + host + path
 
